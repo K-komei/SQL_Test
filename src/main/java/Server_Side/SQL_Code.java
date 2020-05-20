@@ -2,23 +2,26 @@ package Server_Side;
 
 //SQL文のコード生成クラス
 
-public class SQL_Code {
-    String sel_code = "SELECT";
-    String ins_code = "INSERT";
-    String frm_code = "FROM";
-    String table_name = "";
-    String wild_code = "*";
+class SQL_Code implements SQL_Send_Code{
 
+    //SQL定型文
+    private String table_name = "";
+    String result ="";
 
-    public String SQL_Str(int flag,String table_name,String[] column_name,String row_count){
-        String result ="";
-
-        switch (flag){
-            case 1:
-            case 2:
-            case 3:
-        }
-
-    return result;
+    //操作するテーブル名をコンストラクタにて代入
+    private SQL_Code(String table_name){
+        this.table_name = table_name;
     }
+
+    // SQLコードの生成メソッド
+    @Override
+    public String SELECT_CALL(){
+     return result;
+    }
+
+    @Override
+    public String INSERT_CALL() {
+        return result;
+    }
+
 }
